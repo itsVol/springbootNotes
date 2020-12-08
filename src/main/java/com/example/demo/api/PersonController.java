@@ -34,7 +34,7 @@ public class PersonController {
     }
 
     @ApiOperation(value = "通过id获取用户")
-    @GetMapping(path ="{id}")
+    @GetMapping(path ="{id}")//id是变量。getMapping的值也随之变化
     public Person getPersonById(@PathVariable("id") UUID id){
         return personService.getPersonById(id)
                 .orElse(null);
