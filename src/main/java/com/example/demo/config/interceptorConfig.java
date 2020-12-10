@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 @Component
-public class interceptorConfig implements WebMvcConfigurer {
+public class interceptorConfig implements WebMvcConfigurer{
     //覆盖父类中添加拦截器的方法
     @Autowired
     private  myInterceptor myInterceptors;
