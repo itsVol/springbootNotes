@@ -7,9 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+/**
+ * @author itsVol
+ */
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao{
     private static List<Person> DATABASE =new ArrayList<>();
+
+    /**
+     *
+     * @param id 用户id
+     * @param person 人
+     * @return 1
+     */
     @Override
     public int insertPerson(UUID id, Person person) {
         DATABASE.add(new Person(id, person.getName()));

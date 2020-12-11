@@ -6,10 +6,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-
+/**
+ * @author itsVol
+ */
 @Component
-public class interceptorConfig implements WebMvcConfigurer{
+public class InterceptorConfig implements WebMvcConfigurer{
     //覆盖父类中添加拦截器的方法
+    /**
+     * 自己写的拦截器注册
+     */
     @Autowired
     private  myInterceptor myInterceptors;
     @Override

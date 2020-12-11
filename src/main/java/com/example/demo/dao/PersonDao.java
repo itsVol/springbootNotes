@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * @author itsVol
+ */
 public interface PersonDao {
     int insertPerson(UUID id, Person person);
     default int insertPerson(Person person){
