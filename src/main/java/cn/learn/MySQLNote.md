@@ -53,3 +53,32 @@ UPDATE ts_new_user set name ='李四'WHERE id=2;
 UPDATE ts_new_user set name ='王武',gender =0 WHERE id=3;
 
 ```
+我们可以把事务理解成一组sql语句的集合
+mysql中，innodb存储引擎是支持事务的，而且innodb存储引擎的事务完全符合ACID的特性，ACID是如下四大特性的首字母缩写。
+
+A：atomicity    原子性
+
+C：consistency   一致性
+
+I：isolation    隔离性
+
+D：durability   持久性
+
+
+
+原子性：整个事务中的所有操作要么全部执行成功，要么全部执行失败后混滚到最初状态。
+
+一致性：数据库总是从一个一致性状态转为另一个一致性状态。
+
+隔离性：一个事务在提交之前所做出的的操作是否能为其他事务可见，由于不同的场景需求不同，所以针对隔离性来说，有不同的隔离级别。
+
+持久性：事务一旦提交，事务所做出的修改将会永久保存，此时即使数据库崩溃，修改的数据也不会丢失。
+https://www.zsythink.net/archives/1204
+
+RESTful API 的总结：
+1.每一个URL代表一种资源
+2.客户端和服务器之间，传递这种资源的某种表现层
+3.客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。具体为：
+GET用来获取资源，POST用来新建资源（也可以用于更新资源），PUT用来更新资源，DELETE用来删除资源。
+
+ 
